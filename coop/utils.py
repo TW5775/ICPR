@@ -102,6 +102,8 @@ def get_img_norm_cfg(dataset_name, dataset_dir):
         img_norm_cfg = dict(mean=62.10432052612305, std=23.96998405456543)
     elif dataset_name == 'IRDST-real':   
         img_norm_cfg = {'mean': 101.54053497314453, 'std': 56.49856185913086}
+    elif dataset_name == 'WideIRSTD':
+        img_norm_cfg = dict(mean=64.181, std=24.502)
     else:
         with open(dataset_dir + '/' + dataset_name +'/img_idx/train_' + dataset_name + '.txt', 'r') as f:
             train_list = f.read().splitlines()
